@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.landing-page {
+    background: #222222;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#device,
+#design,
+#technology,
+#strategy,
+#management {
+    display: block;
+    width: 240px;
+    height: 120px;
+    margin: 0 auto 40px;
+    overflow: visible;
+}
+
+
+.landind-page__title {
+    width: 25rem;
+    text-align: center;
+    color: #ff9900;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.landind-page___subtitle {
+    color: #999999;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.button {
+    background: 0 0;
+    color: #099;
+    border: 2px solid #099;
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 1rem;
+}
+
+.button:hover,
+.button:active {
+    color: #222222;
+    background: #009999;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20rem 20rem 20rem;
+
+    grid-template-areas:
+            "about"
+            "features"
+            "prsonal";
+}
+.about {
+    grid-area: about;
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "img img abt abt";
+}
+
+.about__image {
+    grid-area: img;
+    background: #fff;
+}
+
+.about__title {
+    grid-area: abt;
+    background: #ff9900;
+    margin: 0;
+}
+
+
+.personal-section {
+    grid-area: prsonal;
+}
+
+.features {
+    grid-area: features;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "ftr1 ftr2 ftr3 ftr4";
+    grid-template-rows: 70vh;
+    height: 500px;
+}
+
+.feature__item {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 20% 20% 20%;
+    align-content: center;
+    justify-items: center;
+}
+
+.feature__title {
+    margin-top: 3rem;
+}
+.design {
+    background: #333333;
+}
+
+.design h1,
+.design p {
+    color: #ff9900;
+}
+
+.technology {
+    background: #111111;
+}
+
+.technology h1,
+.technology p {
+    color: #009999;
+}
+
+.strategy {
+    background: #666666;
+}
+
+.strategy h1,
+.strategy p,
+.management h1,
+.management p {
+    color: white;
+}
+
+.management {
+    background: #009999;
+}
+
+.feature__title {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.feature_description {
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    width: 70%;
+}
