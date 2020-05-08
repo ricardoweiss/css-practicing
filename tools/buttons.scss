@@ -1,0 +1,31 @@
+@import "variables";
+
+.button {
+  background: 0 0;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.button--blue {
+  color: map_get($colors, blue);
+  border: 2px solid map_get($colors, blue);
+  &:hover,
+  &:active {
+    color: map_get($colors, dark);
+    background: map_get($colors, blue);
+  }
+}
+
+.button--brown {
+  border: 2px solid map_get($colors, brown);
+  color: map_get($colors, brown);
+
+  &:hover,
+  &:active {
+    background: map_get($colors, brown);
+    color: map_get($colors, dark);
+  }
+}
