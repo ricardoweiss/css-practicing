@@ -1,97 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap");
-.arrow, .features__arrow, .about__img-arrow {
-  width: 2rem;
-  height: 2rem;
-  background: inherit;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+@import "tools/variables";
+@import "tools/media-queries";
+@import "tools/arrows.scss";
+@import "tools/buttons.scss";
 
-.about__img-arrow {
-  transform: translateY(1rem) rotate(45deg);
-}
-@media (min-width: 48rem) {
-  .about__img-arrow {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 94.3%;
-  }
-}
-@media (min-width: 62rem) {
-  .about__img-arrow {
-    top: 45%;
-    right: -1rem;
-  }
-}
 
-.features__arrow {
-  transform: rotate(45deg);
-  position: absolute;
-  right: 46.5%;
-  bottom: -1rem;
-  z-index: 1;
-}
-@media (min-width: 48rem) {
-  .features__arrow {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 45%;
-    right: -1rem;
-  }
-}
-
-.button {
-  background: 0 0;
-  padding: 0.8rem 2.5rem;
-  font-size: 1rem;
-  font-family: inherit;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-.button--blue {
-  color: #009999;
-  border: 2px solid #009999;
-}
-.button--blue:hover, .button--blue:active {
-  color: #222222;
-  background: #009999;
-}
-
-.button--brown {
-  border: 2px solid #5e582f;
-  color: #5e582f;
-}
-.button--brown:hover, .button--brown:active {
-  background: #5e582f;
-  color: #222222;
-}
 
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 30rem 90rem 48rem 22rem 22rem 100vh;
-  grid-template-areas: "landing" "about" "features" "personal" "awards" "testimonial" "footer";
-}
-@media (min-width: 48rem) {
-  .container {
-    grid-template-rows: 100vh 30rem 45rem 25rem 22rem 22rem 100vh;
+  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem 22rem 22rem 100vh;
+  grid-template-areas:
+          "landing"
+          "about"
+          "features"
+          "personal"
+          "awards"
+          "testimonial"
+          "footer";
+
+  @include large {
+    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 45rem 25rem 22rem 22rem 100vh;
   }
-}
-@media (min-width: 62rem) {
-  .container {
-    grid-template-rows: 100vh 20rem 28rem 25rem 22rem 100vh;
+
+  @include desktop {
+    grid-template-rows: 100vh 20rem /*27rem 27rem*/ 28rem 25rem 22rem 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "landing landing" "about about" "features features" "personal personal" "awards testimonial" "footer footer";
+    grid-template-areas: "landing landing"
+                          "about about"
+                          "features features"
+                          "personal personal"
+                          "awards testimonial"
+                          "footer footer";
   }
 }
 
+
 .landing-page {
-  background: #222222;
+  background: map_get($colors, dark);
   margin: 0;
   /*position: relative;*/
   width: 100%;
@@ -101,12 +53,14 @@ body {
   align-items: center;
   justify-content: center;
   grid-area: landing;
+
 }
+
 
 .landing-page__title {
   width: 20rem;
   text-align: center;
-  color: #5e582f;
+  color: map_get($colors, brown);
   font-size: 2.4rem;
   line-height: 2.5rem;
   font-weight: 400;
@@ -114,7 +68,7 @@ body {
 }
 
 .landing-page___subtitle {
-  color: #999999;
+  color: map_get($colors, grey);
   font-family: sans-serif;
   font-size: 0.9rem;
 }
@@ -125,10 +79,11 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 18rem 12rem;
-  grid-template-areas: "img" "abouttext";
-}
-@media (min-width: 62rem) {
-  .about {
+  grid-template-areas:
+          "img"
+          "abouttext";
+
+  @include desktop {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "img abouttext";
     grid-template-rows: 1fr;
@@ -155,11 +110,13 @@ body {
 .about__image-container {
   width: 45%;
   height: 90%;
+
 }
+
 
 .about__text-cell {
   grid-area: abouttext;
-  background: #5e582f;
+  background: map_get($colors, brown);
   margin: 0;
 }
 
@@ -167,25 +124,25 @@ body {
   /*TODO*/
 }
 
+
 .features {
   grid-area: features;
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-}
-@media (min-width: 48rem) {
-  .features {
+
+  @include large {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-}
-@media (min-width: 62rem) {
-  .features {
+
+  @include desktop {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
 }
+
 
 .feature__item {
   text-align: center;
@@ -206,33 +163,36 @@ body {
 }
 
 .design {
-  background: #333333;
+  background: map_get($colors, darker-grey);
   position: relative;
-}
-.design h1,
-.design p {
-  color: #ff9900;
-  margin: 0.9rem;
+  h1,
+  p {
+    color: map_get($colors, yellow);
+    margin: 0.9rem;
+  }
 }
 
 .technology {
-  background: #111111;
-}
-.technology h1,
-.technology p {
-  color: #009999;
+  background: map_get($colors, darker);
+  h1,
+  p {
+    color: map_get($colors, blue);
+  }
 }
 
+
+
 .strategy {
-  background: #999999;
+  background: map_get($colors, grey);
 }
 
 /*.feature__title--strategy,
 .feature__title--management {
   color: white;
 }*/
+
 .management {
-  background: #009999;
+  background: map_get($colors, blue);
 }
 
 .feature__title {
@@ -254,40 +214,45 @@ body {
   color: white;
 }
 
+
 .personal-section {
   grid-area: personal;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "info" "photo" "coffee";
-}
-@media (min-width: 40rem) {
-  .personal-section {
+  grid-template-areas: "info"
+                       "photo"
+                       "coffee";
+
+  @include medium {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1.2fr 1fr;
-    grid-template-areas: "info info photo" "coffee coffee coffee";
+    grid-template-areas:
+            "info info photo"
+            "coffee coffee coffee";
   }
-}
-@media (min-width: 48rem) {
-  .personal-section {
+
+  @include large {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-template-areas: "info photo coffee";
+    grid-template-areas:
+            "info photo coffee"
+
   }
-}
-@media (min-width: 62rem) {
-  .personal-section {
+
+  @include desktop {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "info info photo coffee";
   }
+
 }
 
 .personal-info {
   grid-area: info;
-  background: #eee;
+  background: map_get($colors, light-grey);
 }
 
 .personal-section__photo {
@@ -296,17 +261,18 @@ body {
 
 .personal-section__email {
   grid-area: coffee;
-  background: #999999;
+  background: map_get($colors, grey);
 }
 
 .awards {
   grid-area: awards;
-  background: #009999;
+  background: map_get($colors, blue);
 }
 
 .testimonial {
   grid-area: testimonial;
-  background: #5e582f;
+  background: map_get($colors, brown);
+
 }
 
 .footer {
@@ -315,7 +281,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #222222;
+  background: map_get($colors, dark);
 }
 
 .footer__title {
@@ -323,7 +289,6 @@ body {
 }
 
 .footer__description {
-  color: #999999;
+  color: map_get($colors, grey);
 }
 
-/*# sourceMappingURL=main.css.map */

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Title</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
 <main class="container">
     <section class="landing-page">
-        <div class="image-container__weed">
-            <img src="Image-Source-PlusPNG.com.png" alt="weed" class="weed-img">
+        <div class="clock">
+            <h1 class="counter"></h1>
         </div>
 <!--
         <svg version="1.1" id="device" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,59 +27,75 @@
                   stroke-miterlimit="10" width="368.01644603135225" height="230"></rect>
 </svg>
 -->
-        <h1 class="landind-page__title">
-            DIGITAL <span style="color: #009999">CANNABIS</span> <span style="color: white">CONSULTANCY</span>
+        <h1 class="landing-page__title">
+            RICARDO <span style="color: #009999">WEISS</span> <span style="color: white"> FULLSTACK</span>
         </h1>
-        <p class="landind-page___subtitle">
-            Moving pencils and pixels since 2007
+        <p class="landing-page___subtitle">
+            Front-end & Back-end Web Development
         </p>
 
-        <button class="button" type="button">FIND OUT MORE</button>
+        <button class="button button--blue" type="button">FIND OUT MORE</button>
 
     </section>
     <section class="about">
         <div class="about__image">
-            <div class="image-container__bud">
-                <img class="bud" src="pot.jpg" alt="bud">
+            <div class="about__image-container">
+
+
             </div>
+
+
+            <div class="about__img-arrow"></div>
         </div>
-        <h1 class="about__title">
-            Maria de Fatima
-        </h1>
+        <div class="about__text-cell">
+            <h1 class="about__title">
+                Maria de Fatima
+            </h1>
+
+        </div>
+
     </section>
     <section class="features">
-        <div class="feature__item design">
-            <svg version="1.1" id="design" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve" style="overflow:visible">
-<g id="pencilflip" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 297.781, 0, 0, 1);">
-    <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="112.5" y1="66.8" x2="187.5" y2="66.8"></line>
-    <path fill="none" stroke="#000000" stroke-width="7.8956" stroke-linejoin="round" stroke-miterlimit="10" d="M187.5,48.5
-        c0-21.3-16.8-38.5-37.5-38.5c-20.7,0-37.5,17.2-37.5,38.5l0,164.5l37.5,77l37.5-77L187.5,48.5C187.5,48.5,187.5,48.5,187.5,48.5z"></path>
-    <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="112.5" y1="48.5" x2="187.5" y2="48.5"></line>
-    <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="137.4" y1="264.2" x2="162.6" y2="264.2"></line>
-    <polyline fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" points="112.5,213 130.3,192.8 150,213
-        169.7,192.8 187.5,213 		"></polyline>
-    <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="130.3" y1="192.8" x2="130.3" y2="66.8"></line>
-    <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="169.7" y1="192.8" x2="169.7" y2="66.8"></line>
-</g>
-                <line id="pencilline" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="150" y1="290" x2="447.7812000000023" y2="290"></line>
-</svg>
-            <h1 class="feature__title">DESIGN</h1>
-            <p class="feature_description">Offering a broad spectrum of digital creative services, including UI
-                (user interface) and UX (user experience) design, concept and ideation, copywriting and art
-                direction.</p>
+
+            <div class="feature__item design">
+                <svg version="1.1" id="design" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve" style="overflow:visible">
+    <g id="pencilflip" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 297.781, 0, 0, 1);">
+        <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="112.5" y1="66.8" x2="187.5" y2="66.8"></line>
+        <path fill="none" stroke="#000000" stroke-width="7.8956" stroke-linejoin="round" stroke-miterlimit="10" d="M187.5,48.5
+            c0-21.3-16.8-38.5-37.5-38.5c-20.7,0-37.5,17.2-37.5,38.5l0,164.5l37.5,77l37.5-77L187.5,48.5C187.5,48.5,187.5,48.5,187.5,48.5z"></path>
+        <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="112.5" y1="48.5" x2="187.5" y2="48.5"></line>
+        <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="137.4" y1="264.2" x2="162.6" y2="264.2"></line>
+        <polyline fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" points="112.5,213 130.3,192.8 150,213
+            169.7,192.8 187.5,213 		"></polyline>
+        <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="130.3" y1="192.8" x2="130.3" y2="66.8"></line>
+        <line fill="none" stroke="#000000" stroke-width="7.8956" stroke-miterlimit="10" x1="169.7" y1="192.8" x2="169.7" y2="66.8"></line>
+    </g>
+                    <line id="pencilline" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="150" y1="290" x2="447.7812000000023" y2="290"></line>
+    </svg>
+                <h1 class="feature__title">DESIGN</h1>
+                <p class="feature__description">Offering a broad spectrum of digital creative services, including UI
+                    (user interface) and UX (user experience) design, concept and ideation, copywriting and art
+                    direction.</p>
+
+                <div class="features__arrow"></div>
+
         </div>
-        <div class="feature__item technology">
-            <svg version="1.1" id="technology" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
-<g>
-<polyline fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" points="222.2,274.4 97.8,150 222.2,25.6 		"></polyline>
-<polyline fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" points="377.8,25.6 502.2,150 377.8,274.4 		"></polyline>
-<line id="cursor" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="300" y1="0" x2="300" y2="300" style="opacity: 1;"></line>
-</g>
-</svg>
-            <h1 class="feature__title">TECHNOLOGY</h1>
-            <p class="feature_description">Delivering bespoke mobile applications and web solutions through a
-                trusted and proven network of highly skilled and experienced partners.</p>
+
+
+            <div class="feature__item technology">
+                <svg version="1.1" id="technology" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
+    <g>
+    <polyline fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" points="222.2,274.4 97.8,150 222.2,25.6 		"></polyline>
+    <polyline fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" points="377.8,25.6 502.2,150 377.8,274.4 		"></polyline>
+    <line id="cursor" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="300" y1="0" x2="300" y2="300" style="opacity: 1;"></line>
+    </g>
+    </svg>
+                <h1 class="feature__title">TECHNOLOGY</h1>
+                <p class="feature__description">Delivering bespoke mobile applications and web solutions through a
+                    trusted and proven network of highly skilled and experienced partners.</p>
+                <div class="features__arrow"></div>
         </div>
+
         <div class="feature__item strategy">
             <svg version="1.1" id="strategy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
 <g>
@@ -89,19 +106,23 @@
 <line id="line3" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="220" y1="214" x2="340.63743999998496" y2="214"></line>
 </g>
 </svg>
-            <h1 class="feature__title">STRATEGY</h1>
-            <p class="feature_description">Approaching every project by first seeking to understand the problem,
+            <h1 class="feature__title feature__title--white">STRATEGY</h1>
+            <p class="feature__description feature__description--white">Approaching every project by first seeking to understand the problem,
                 verifying a need and market fit, then defining a thoroughly considered product strategy.</p>
+            <div class="features__arrow"></div>
         </div>
+
         <div class="feature__item management">
             <svg version="1.1" id="management" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
 <path id="nut" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" d="M370,28.8H230L160,150l70,121.2h140L440,150 L370,28.8z" style="transform: matrix(1, 0, 0, 1, 0, 0);"></path>
                 <circle fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" cx="300" cy="150" r="56"></circle>
 </svg>
-            <h1 class="feature__title">MANAGEMENT</h1>
-            <p class="feature_description">Partnering with our customers, we define, design, develop and deliver
+            <h1 class="feature__title feature__title--white">MANAGEMENT</h1>
+            <p class="feature__description feature__description--white">Partnering with our customers, we define, design, develop and deliver
                 bespoke solutions and provide ongoing support throughout the product lifecycle.</p>
+
         </div>
+
     </section>
     <section class="personal-section">
         <article class="personal-info">
@@ -120,7 +141,7 @@
     <footer class="footer">
         <h1 class="footer__title">SAY <span style="color: #009999">HELLO</span></h1>
         <p class="footer__description">lorem</p>
-        <button class="button footer-button">maria@devdesign.com</button>
+        <button class="button button--brown">maria@devdesign.com</button>
     </footer>
 </main>
 </body>
