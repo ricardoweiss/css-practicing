@@ -378,8 +378,10 @@ body {
   }
 }
 
-.works__photo--adjustment {
-  height: 8.5rem;
+@media (min-width: 48rem) {
+  .works__photo--adjustment {
+    height: 8.5rem;
+  }
 }
 
 /*

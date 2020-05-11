@@ -341,7 +341,10 @@ body {
 }
 
 .works__photo--adjustment {
-  height: 8.5rem;
+  @include large {
+    height: 8.5rem;
+  }
+
 }
 /*
 .awards__photo--no-shadow {
