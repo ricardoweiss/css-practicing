@@ -69,22 +69,30 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: "Oswald", sans-serif;
+  background: #222222;
 }
 
 .container {
+  margin: 0 auto;
   display: grid;
+  max-width: 137rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 30rem 90rem 48rem 22rem 22rem 100vh;
+  grid-template-rows: 100vh 30rem 90rem 48rem auto 22rem 100vh;
   grid-template-areas: "landing" "about" "features" "personal" "awards" "testimonial" "footer";
+}
+@media (min-width: 40rem) {
+  .container {
+    grid-template-rows: 100vh 30rem 90rem 48rem auto 22rem 100vh;
+  }
 }
 @media (min-width: 48rem) {
   .container {
-    grid-template-rows: 100vh 30rem 45rem 25rem 22rem 22rem 100vh;
+    grid-template-rows: 100vh 30rem 45rem 25rem auto 22rem 100vh;
   }
 }
 @media (min-width: 62rem) {
   .container {
-    grid-template-rows: 100vh 20rem 28rem 25rem 22rem 100vh;
+    grid-template-rows: 100vh 20rem 25rem 25rem auto 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "landing landing" "about about" "features features" "personal personal" "awards testimonial" "footer footer";
   }
@@ -153,8 +161,16 @@ body {
 }
 
 .about__image-container {
-  width: 45%;
-  height: 90%;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: -4rem;
+  right: 6rem;
+}
+
+.image-container__laptop {
+  height: auto;
+  width: 80%;
 }
 
 .about__text-cell {
@@ -197,33 +213,28 @@ body {
 }
 
 #device,
-#design,
-#technology,
-#strategy,
-#management {
-  width: 240px;
+#react,
+#node,
+#mongo {
+  width: auto;
   height: 120px;
 }
 
-.design {
+#express {
+  width: auto;
+  height: 110px;
+}
+
+.mongo {
   background: #333333;
   position: relative;
 }
-.design h1,
-.design p {
-  color: #ff9900;
-  margin: 0.9rem;
-}
 
-.technology {
+.react {
   background: #111111;
 }
-.technology h1,
-.technology p {
-  color: #009999;
-}
 
-.strategy {
+.express {
   background: #999999;
 }
 
@@ -231,17 +242,26 @@ body {
 .feature__title--management {
   color: white;
 }*/
-.management {
+.node {
   background: #009999;
 }
 
 .feature__title {
   font-weight: 400;
   font-size: 1.8rem;
+  margin: 0.9rem;
 }
 
 .feature__title--white {
   color: white;
+}
+
+.feature__title--yellow {
+  color: #ff9900;
+}
+
+.feature__title--blue {
+  color: #009999;
 }
 
 .feature__description {
@@ -252,6 +272,14 @@ body {
 
 .feature__description--white {
   color: white;
+}
+
+.feature__description--yellow {
+  color: #ff9900;
+}
+
+.feature__description--blue {
+  color: #009999;
 }
 
 .personal-section {
@@ -299,9 +327,56 @@ body {
   background: #999999;
 }
 
-.awards {
+.works {
   grid-area: awards;
   background: #009999;
+  text-align: center;
+}
+
+.works__title {
+  color: #333333;
+}
+
+.works__subtitle {
+  color: #333333;
+}
+
+.works__image-container {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-around;*/
+  align-items: center;
+  height: 90%;
+}
+@media (min-width: 48rem) {
+  .works__image-container {
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    height: auto;
+  }
+}
+
+.works__photo {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+.works__photo:hover, .works__photo:active {
+  transform: scale(1.05);
+}
+@media (min-width: 48rem) {
+  .works__photo {
+    width: 30%;
+    margin: 0 0 1rem 0;
+    max-height: 13rem;
+    max-width: 14rem;
+  }
+}
+
+.awards__photo--no-shadow {
+  box-shadow: none;
 }
 
 .testimonial {

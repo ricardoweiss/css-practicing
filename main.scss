@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
-@import "tools/variables";
-@import "tools/media-queries";
+@import "tools/variables.scss";
+@import "tools/media-queries.scss";
 @import "tools/arrows.scss";
 @import "tools/buttons.scss";
 
@@ -10,12 +10,15 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Oswald', sans-serif;
+  background: map_get($colors, dark);
 }
 
 .container {
+  margin: 0 auto;
   display: grid;
+  max-width: 137rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem 22rem 22rem 100vh;
+  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem auto 22rem 100vh;
   grid-template-areas:
           "landing"
           "about"
@@ -25,12 +28,16 @@ body {
           "testimonial"
           "footer";
 
+  @include medium {
+    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem auto 22rem 100vh;
+  }
+
   @include large {
-    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 45rem 25rem 22rem 22rem 100vh;
+    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 45rem 25rem auto 22rem 100vh;
   }
 
   @include desktop {
-    grid-template-rows: 100vh 20rem /*27rem 27rem*/ 28rem 25rem 22rem 100vh;
+    grid-template-rows: 100vh 20rem /*27rem 27rem*/ 25rem 25rem auto 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "landing landing"
                           "about about"
@@ -108,9 +115,17 @@ body {
 }
 
 .about__image-container {
-  width: 45%;
-  height: 90%;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: -4rem;
+  right: 6rem;
 
+}
+
+.image-container__laptop {
+  height: auto;
+  width: 80%;
 }
 
 
@@ -154,35 +169,30 @@ body {
 }
 
 #device,
-#design,
-#technology,
-#strategy,
-#management {
-  width: 240px;
+#react,
+#node,
+#mongo {
+  width: auto;
   height: 120px;
 }
 
-.design {
+#express {
+  width: auto;
+  height: 110px;
+}
+
+.mongo {
   background: map_get($colors, darker-grey);
   position: relative;
-  h1,
-  p {
-    color: map_get($colors, yellow);
-    margin: 0.9rem;
-  }
 }
 
-.technology {
+.react {
   background: map_get($colors, darker);
-  h1,
-  p {
-    color: map_get($colors, blue);
-  }
 }
 
 
 
-.strategy {
+.express {
   background: map_get($colors, grey);
 }
 
@@ -191,17 +201,26 @@ body {
   color: white;
 }*/
 
-.management {
+.node {
   background: map_get($colors, blue);
 }
 
 .feature__title {
   font-weight: 400;
   font-size: 1.8rem;
+  margin: 0.9rem;
 }
 
 .feature__title--white {
   color: white;
+}
+
+.feature__title--yellow {
+  color: map_get($colors, yellow);
+}
+
+.feature__title--blue {
+  color: map_get($colors, blue);
 }
 
 .feature__description {
@@ -212,6 +231,14 @@ body {
 
 .feature__description--white {
   color: white;
+}
+
+.feature__description--yellow {
+  color: map_get($colors, yellow);
+}
+
+.feature__description--blue {
+  color: map_get($colors, blue);
 }
 
 
@@ -264,9 +291,56 @@ body {
   background: map_get($colors, grey);
 }
 
-.awards {
+.works {
   grid-area: awards;
   background: map_get($colors, blue);
+  text-align: center;
+}
+
+.works__title {
+  color: map_get($colors, darker-grey);
+
+}
+
+.works__subtitle {
+  color: map_get($colors, darker-grey);
+
+}
+
+.works__image-container {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-around;*/
+  align-items: center;
+  height: 90%;
+  @include large {
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    height: auto;
+  }
+}
+
+.works__photo {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+
+  }
+  @include large {
+    width: 30%;
+    margin: 0 0 1rem 0;
+    max-height: 13rem;
+    max-width: 14rem
+  }
+}
+
+.awards__photo--no-shadow {
+  box-shadow: none;
 }
 
 .testimonial {
