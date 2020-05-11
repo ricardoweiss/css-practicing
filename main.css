@@ -335,10 +335,12 @@ body {
 
 .works__title {
   color: #333333;
+  margin-bottom: 0;
 }
 
 .works__subtitle {
   color: #333333;
+  margin-top: 0;
 }
 
 .works__image-container {
@@ -352,7 +354,7 @@ body {
   .works__image-container {
     flex-direction: row;
     /*flex-wrap: wrap;*/
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: auto;
   }
 }
@@ -368,17 +370,22 @@ body {
 }
 @media (min-width: 48rem) {
   .works__photo {
-    width: 30%;
-    margin: 0 0 1rem 0;
-    max-height: 13rem;
-    max-width: 14rem;
+    width: auto;
+    margin: 0 0 2rem 0;
+    height: 8rem;
+    align-self: flex-end;
+    max-height: 15rem;
   }
 }
 
-.awards__photo--no-shadow {
-  box-shadow: none;
+.works__photo--adjustment {
+  height: 8.5rem;
 }
 
+/*
+.awards__photo--no-shadow {
+  box-shadow: none;
+}*/
 .testimonial {
   grid-area: testimonial;
   background: #5e582f;

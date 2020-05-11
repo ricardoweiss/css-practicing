@@ -299,12 +299,12 @@ body {
 
 .works__title {
   color: map_get($colors, darker-grey);
-
+  margin-bottom: 0;
 }
 
 .works__subtitle {
   color: map_get($colors, darker-grey);
-
+  margin-top: 0;
 }
 
 .works__image-container {
@@ -316,7 +316,7 @@ body {
   @include large {
     flex-direction: row;
     /*flex-wrap: wrap;*/
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: auto;
   }
 }
@@ -329,19 +329,24 @@ body {
   &:hover,
   &:active {
     transform: scale(1.05);
-
   }
+
   @include large {
-    width: 30%;
-    margin: 0 0 1rem 0;
-    max-height: 13rem;
-    max-width: 14rem
+    width: auto;
+    margin: 0 0 2rem 0;
+    height: 8rem;
+    align-self: flex-end;
+    max-height: 15rem;
   }
 }
 
+.works__photo--adjustment {
+  height: 8.5rem;
+}
+/*
 .awards__photo--no-shadow {
   box-shadow: none;
-}
+}*/
 
 .testimonial {
   grid-area: testimonial;
