@@ -9,6 +9,11 @@
 <body>
 <main class="container">
     <section class="landing-page">
+        <div class="landing-page__image-container">
+            <img class="landing-page__logo" src="images/logo.png" alt="logo">
+
+
+        </div>
 
         <!--
                 <svg version="1.1" id="device" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -38,17 +43,20 @@
     <section class="about">
         <div class="about__image">
             <div class="about__image-container">
-
+                <!--  <img src="images/scalability.jpg" alt="" class="about__photo">-->
 
             </div>
 
 
-            <div class="about__img-arrow"></div>
         </div>
         <div class="about__text-cell">
             <h1 class="about__title">
-                lorem ipsum
+                SCALABILITY
             </h1>
+            <p class="about__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante quis dui
+                faucibus malesuada. Vivamus vestibulum purus in vehicula sollicitudin. Praesent placerat lorem nulla,
+                nec blandit libero vestibulum ut. Nulla ante urna, tristique finibus ipsum maximus, laoreet sagittis.</p>
+            <div class="about__img-arrow"></div>
 
         </div>
 
@@ -69,7 +77,8 @@
 
 
             <h1 class="feature__title feature__title--yellow">MONGODB</h1>
-            <p class="feature__description feature__description--yellow">Offering a broad spectrum of digital creative services, including UI
+            <p class="feature__description feature__description--yellow">Offering a broad spectrum of digital creative
+                services, including UI
                 (user interface) and UX (user experience) design, concept and ideation, copywriting and art
                 direction.</p>
 
@@ -253,14 +262,17 @@
             <h1 class="personal-info__name">Maria de Fatima</h1>
             <p class="personal-info__description">Lorem ipsum</p>
         </article>
-        <div class="personal-section__photo">photo</div>
+        <div class="personal-section__photo">
+            
+        </div>
         <div class="personal-section__email">email</div>
     </section>
     <section class="works">
         <h1 class="works__title">Works</h1>
         <p class="works__subtitle">(click in the project for more information)</p>
         <div class="works__image-container">
-            <img class="works__photo awards__photo--no-shadow works__photo--adjustment" src="images/memorygame2.png" alt="jogo de memória">
+            <img class="works__photo awards__photo--no-shadow works__photo--adjustment" src="images/memorygame2.png"
+                 alt="jogo de memória">
             <img class="works__photo" src="images/uhost.png" alt="site de host">
             <img class="works__photo" src="images/carregando&login.png" alt="jogo de memória">
         </div>
@@ -274,5 +286,15 @@
         <button class="button button--brown">maria@devdesign.com</button>
     </footer>
 </main>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.3/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 </body>
 </html>

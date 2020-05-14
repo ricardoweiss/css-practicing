@@ -6,17 +6,20 @@
 
 .about__img-arrow {
   @extend .arrow;
-  transform: translateY(1rem) rotate(45deg);
-  @include large {
-    transform: rotate(45deg) ;
-    position: absolute;
-    top: 94.3%;
-  }
+  transform: rotate(45deg);
+  position: absolute;
+  top: -8.6%;
+  left: 48%;
+
   @include desktop {
+    position: absolute;
+    left: -1rem;
     top: 45%;
-    right: -1rem;
   }
 }
+
+
+
 
 .features__arrow {
   @extend .arrow;
