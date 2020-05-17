@@ -20,7 +20,7 @@ body {
   display: grid;
   max-width: 240rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 56rem auto auto 100vh;
+  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem auto auto auto 100vh;
   grid-template-areas:
           "landing"
           "about"
@@ -305,7 +305,7 @@ body {
   grid-area: personal;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.9fr 1.1fr 1fr;
+  grid-template-rows: 21rem 21rem 18rem;
   grid-template-areas: "info"
                        "photo"
                        "coffee";
@@ -339,7 +339,79 @@ body {
 .personal-section__info {
   grid-area: info;
   background: map_get($colors, light-grey);
+  text-align: right;
+
 }
+
+/*.personal-info__container {
+  margin-right: 3rem;
+}*/
+
+.profile__title {
+  color: map_get($colors, grey);
+}
+
+.profile__description {
+  font-size: 11px;
+  width: 80%;
+  @include large {
+    font-size: 9px;
+  }
+  @include desktop {
+    font-size: 11px;
+  }
+
+}
+
+
+.personal-info__container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "profile education"
+                       "experience languages";
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-info__profile {
+  grid-area: profile;
+  @extend .personal-info
+
+}
+
+.personal-info__experience {
+  grid-area: experience;
+  @extend .personal-info
+}
+
+.personal-info__vertical-line {
+  position: absolute;
+  border: 1px solid map_get($colors, grey);
+  left: 49.9%;
+  top: 7%;
+  height: 85%;
+
+}
+
+.personal-info__education {
+  grid-area: education;
+  @extend .personal-info
+}
+
+.personal-info__languages {
+  grid-area: languages;
+  @extend .personal-info
+}
+
 
 .personal-section__photo {
   grid-area: photo;
@@ -366,6 +438,7 @@ body {
   transition: opacity 1s;
 }
 
+
 .personal-section__quote {
   grid-area: coffee;
   background: map_get($colors, grey);
@@ -373,7 +446,27 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+
+  &:hover {
+    .quote__block {
+      opacity: 0;
+    }
+    .personal-section__background-image {
+      opacity: 1;
+    }
+  }
 }
+
+.personal-section__background-image {
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: 400px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 
 .quote__block {
   font-size: 1.1rem;
@@ -384,6 +477,7 @@ body {
   border: solid 2px #757575;
   padding: 1em;
   position: relative;
+  transition: opacity 1s;
   &:before {
     background-color: map_get($colors, grey);
     bottom: -10%;
@@ -406,6 +500,8 @@ body {
     position: relative;
     z-index: 1;
   }
+
+
 }
 
 
@@ -518,7 +614,7 @@ body {
   }
   @include desktop {
     height: 16rem;
-    width: 100%;
+    width: 95%;
     justify-content: space-evenly;
   }
 }
@@ -534,6 +630,7 @@ body {
   @include desktop {
     width: auto;
     max-width: 9rem;
+    max-height: none;
   }
   &:hover {
     transform: scale(1.05);
@@ -568,5 +665,11 @@ body {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes start-low {
+  0% {
+
   }
 }
