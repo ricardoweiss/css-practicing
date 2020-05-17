@@ -13,12 +13,14 @@ body {
   background: map_get($colors, dark);
 }
 
+
+
 .container {
   margin: 0 auto;
   display: grid;
-  max-width: 137rem;
+  max-width: 240rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem auto 22rem 100vh;
+  grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 56rem auto auto 100vh;
   grid-template-areas:
           "landing"
           "about"
@@ -29,15 +31,15 @@ body {
           "footer";
 
   @include medium {
-    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem auto 22rem 100vh;
+    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 90rem 48rem auto auto 100vh;
   }
 
   @include large {
-    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 45rem 25rem auto 22rem 100vh;
+    grid-template-rows: 100vh 30rem /*27rem 27rem*/ 45rem 25rem 25rem 25rem 100vh;
   }
 
   @include desktop {
-    grid-template-rows: 100vh 20rem /*27rem 27rem*/ 25rem 25rem auto 100vh;
+    grid-template-rows: 100vh 20rem /*27rem 27rem*/ 25rem 25rem 25rem 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "landing landing"
                           "about about"
@@ -74,6 +76,10 @@ body {
   left: 43.5%;
   top: 24%;
   animation: up-and-down 1s ease-out 1s;
+  max-height: 200px;
+  max-width: 216.16px;
+  min-height: 90px;
+  min-width: 97px;
 }
 
 
@@ -101,10 +107,14 @@ body {
   grid-column: span 4;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 18rem 12rem;
+  grid-template-rows: 1.2fr 0.9fr;
   grid-template-areas:
           "img"
           "abouttext";
+
+  @include large {
+    grid-template-rows: 1.2fr 1.1fr;
+  }
 
   @include desktop {
     grid-template-columns: repeat(2, 1fr);
@@ -151,22 +161,42 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
+  @include desktop {
+    /*
+    justify-content: center;
+    */
+    align-items: flex-start;
+  }
 }
 
 
 .about__title {
   margin-left: 1.5rem;
-  margin-top: 3rem;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+  /*margin-top: 3rem;*/
   color: #1f1d1a;
+  align-self: center;
+  z-index: 1;
+
+  @include desktop {
+    align-self: center;
+  }
 }
 
 .about__subtitle {
   margin-left: 1rem;
   z-index: 1;
   color: #1f1d1a;
+  margin-top: 0.5rem;
+  width: 80%;
+  align-self: center;
+  @include large {
+    font-size: 1.3rem;
+  }
 }
 
 .features {
@@ -253,7 +283,7 @@ body {
 }
 
 .feature__description {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: sans-serif;
   width: 70%;
 }
@@ -275,7 +305,7 @@ body {
   grid-area: personal;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1.9fr 1.1fr 1fr;
   grid-template-areas: "info"
                        "photo"
                        "coffee";
@@ -306,34 +336,107 @@ body {
 
 }
 
-.personal-info {
+.personal-section__info {
   grid-area: info;
   background: map_get($colors, light-grey);
 }
 
 .personal-section__photo {
   grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("images/profile.jpg") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 1s;
+  &:hover, {
+    .big-icon {
+      opacity: 1;
+    }
+    opacity: 0.3;
+  }
+  }
+
+
+
+.big-icon {
+
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.personal-section__email {
+.personal-section__quote {
   grid-area: coffee;
   background: map_get($colors, grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
+
+.quote__block {
+  font-size: 1.1rem;
+}
+
+.quote__block {
+  background-color:map_get($colors, grey);
+  border: solid 2px #757575;
+  padding: 1em;
+  position: relative;
+  &:before {
+    background-color: map_get($colors, grey);
+    bottom: -10%;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -10%;
+    transform: rotate(-15deg) skew(5deg);
+  }
+  cite {
+    display: block;
+    font-style: italic;
+    text-align: right;
+    &:before {
+      content: "- ";
+    }
+  }
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 
 .works {
   grid-area: awards;
   background: map_get($colors, blue);
   text-align: center;
+  @include large {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
 }
+
+
 
 .works__title {
   color: map_get($colors, darker-grey);
   margin-bottom: 0;
+  @include  large {
+  }
+
 }
 
 .works__subtitle {
   color: map_get($colors, darker-grey);
   margin-top: 0;
+  @include  large {
+
+  }
 }
 
 .works__image-container {
@@ -347,6 +450,7 @@ body {
     /*flex-wrap: wrap;*/
     justify-content: space-evenly;
     height: auto;
+
   }
 }
 
@@ -375,16 +479,67 @@ body {
   }
 
 }
-/*
-.awards__photo--no-shadow {
-  box-shadow: none;
-}*/
 
 .testimonial {
   grid-area: testimonial;
   background: map_get($colors, brown);
-
+  text-align: center;
+  @include large {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
+
+.certificates__text {
+  margin-bottom: 2rem;
+  @include large {
+    margin-bottom: 0;
+  }
+}
+.certificates__title {
+  margin-bottom: 0;
+}
+
+.certificates__subtitle {
+  margin-top: 0;
+}
+
+.certificates__image-container {
+  width: 50%;
+  margin: 0 auto;
+  @include large {
+    width: 70%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  @include desktop {
+    height: 16rem;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.certificates__photo {
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  @include large {
+    width: auto;
+    max-height: 6.4rem;
+  }
+  @include desktop {
+    width: auto;
+    max-width: 9rem;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 
 .footer {
   grid-area: footer;
