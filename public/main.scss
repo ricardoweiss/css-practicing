@@ -343,9 +343,6 @@ body {
 
 }
 
-/*.personal-info__container {
-  margin-right: 3rem;
-}*/
 
 .profile__title {
   color: map_get($colors, grey);
@@ -354,6 +351,10 @@ body {
 .profile__description {
   font-size: 11px;
   width: 80%;
+  margin-top: 0;
+  @include medium {
+    margin-top: 11px;
+  }
   @include large {
     font-size: 9px;
   }
