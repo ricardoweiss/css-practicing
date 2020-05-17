@@ -624,6 +624,9 @@ body {
   width: 100%;
   margin-bottom: 1rem;
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
   @include large {
     width: auto;
     max-height: 6.4rem;
@@ -637,6 +640,8 @@ body {
     transform: scale(1.05);
   }
 }
+
+
 
 
 .footer {
