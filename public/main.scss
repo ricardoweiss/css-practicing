@@ -12,7 +12,18 @@ body {
   background: map_get($colors, dark);
 }
 
-
+.backdrop {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  transition: opacity 500ms;
+  z-index: 10;
+}
 
 .container {
   margin: 0 auto;
@@ -559,6 +570,7 @@ body {
   margin-bottom: 2rem;
   width: 50%;
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  cursor: pointer;
   &:hover,
   &:active {
     transform: scale(1.05);
@@ -579,6 +591,32 @@ body {
   }
 
 }
+
+
+.works__modal {
+  display: none;
+  position: fixed;
+  top: 19%;
+  left: 30%;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 50rem;
+  width: 40rem;
+  z-index: 100;
+}
+
+.modal__image-container {
+  margin-top: 2rem;
+  width: 50%;
+  height: auto;
+}
+
+.modal__image {
+  width: 100%;
+}
+
+
 
 .testimonial {
   grid-area: testimonial;
@@ -627,6 +665,7 @@ body {
 .certificates__photo {
   width: 100%;
   margin-bottom: 1rem;
+  cursor: pointer;
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
   &:last-of-type {
     margin-bottom: 2rem;
@@ -658,6 +697,7 @@ body {
   justify-content: center;
   align-items: center;
   background: map_get($colors, dark);
+  position: relative;
 }
 
 .footer__title {
@@ -673,12 +713,11 @@ body {
 
 .footer__social-list {
   list-style: none;
-
   padding: 0;
   margin: 2rem 0 0 0;
   display: flex;
-  width: 15%;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-list__item {
@@ -688,6 +727,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem;
 }
 
 .hackerrank-icon {
@@ -736,6 +776,19 @@ body {
     .linkedin-icon {
       color: white;
     }
+  }
+}
+
+.footer__background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.95) 40%, transparent), url("images/boat-footer.jpg") bottom 40% center/cover no-repeat;
+  background-size: cover;
+  height: 22rem;
+  z-index: 10;
+  @include large-desktop {
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.95) 40%, transparent), url("images/boat-footer.jpg") bottom 35% center/cover no-repeat;
   }
 }
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div class="backdrop"></div>
 <main class="container">
     <section class="landing-page">
         <div class="landing-page__image-container">
@@ -307,12 +308,14 @@
             <p class="works__subtitle">(click in the project for more information)</p>
         </div>
 
+
         <div class="works__image-container">
-            <img class="works__photo awards__photo--no-shadow works__photo--adjustment" src="images/memorygame2.png"
+            <img class="works__photo awards__photo--no-shadow works__photo--adjustment matchgame" src="images/memorygame2.png"
                  alt="jogo de memória">
-            <img class="works__photo" src="images/uhost.png" alt="site de host">
-            <img class="works__photo" src="images/carregando&login.png" alt="jogo de memória">
+            <img class="works__photo uhost" src="images/uhost.png" alt="site de host">
+            <img class="works__photo sedazord" src="images/carregando&login.png" alt="app sedazord">
         </div>
+
     </section>
     <section class="testimonial">
         <div class="certificates__text">
@@ -357,6 +360,7 @@
             </li>
 
         </ul>
+        <div class="footer__background"></div>
     </footer>
 </main>
 
@@ -371,6 +375,27 @@
 <script src="/__/firebase/init.js"></script>
 
 <!--  -->
-<script src="../main.js"></script>
+<script src="scroll.js"></script>
+<script src="modal.js"></script>
+
+<div class="works__modal-container">
+    <div class="works__modal works__modal--matchgame">
+        <div class="modal__image-container">
+            <img class="modal__image" src="images/memorygame2.png" alt="memory game">
+        </div>
+        <h1>blabla</h1>
+        <p>panana</p>
+    </div>
+    <div class="works__modal works__modal--uhost">
+        <div class="modal__image-container">
+            <img class="modal__image" src="images/uhost.png" alt="memory game">
+        </div>
+    </div>
+    <div class="works__modal works__modal--sedazord">
+        <div class="modal__image-container">
+            <img class="modal__image" src="images/carregando&login.png" alt="memory game">
+        </div>
+    </div>
+</div>
 </body>
 </html>
