@@ -37,11 +37,11 @@
         <p class="landing-page___subtitle">
             Front-end & Back-end Web Development
         </p>
-
+        <a href="#about-section"></a>
         <button class="button button--blue" type="button">FIND OUT MORE</button>
 
     </section>
-    <section class="about">
+    <section id="about-section" class="about">
         <div class="about__image">
             <!--<div class="about__image-container">
                 &lt;!&ndash;  <img src="images/scalability.jpg" alt="" class="about__photo">&ndash;&gt;
@@ -82,7 +82,7 @@
             <h1 class="feature__title feature__title--yellow">MONGODB</h1>
             <p class="feature__description feature__description--yellow">MongoDB is an open-source and asynchronous
                 database that stores data as JSON documents. It stores documents under dynamic schemas, which means it’s
-                scalable and easy-to-use. As an asynchronous database, it’s also a perfect fit with Node.js.</p>
+                scalable.</p>
 
             <div class="features__arrow"></div>
 
@@ -177,7 +177,7 @@
             <h1 class="feature__title">EXPRESS</h1>
             <p class="feature__description">Express is a middleware web framework that runs back-end code within
                 Node.js. Basically, it handles all routing requests across the app.</p>
-            <div class="features__arrow"></div>
+            <div class="features__arrow fix"></div>
         </div>
 
         <div class="feature__item react">
@@ -336,7 +336,7 @@
     <footer class="footer">
         <h1 class="footer__title">SAY <span style="color: #009999">HELLO</span></h1>
         <p class="footer__description">lorem</p>
-        <button class="button button--brown">maria@devdesign.com</button>
+        <a class="back-to-top" href="#"><button class="button button--brown">BACK TO TOP</button></a>
     </footer>
 </main>
 
@@ -349,5 +349,8 @@
 
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
+
+<!--  -->
+<script src="../main.js"></script>
 </body>
 </html>

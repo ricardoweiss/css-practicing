@@ -17,6 +17,9 @@
     color: map_get($colors, dark);
     background: map_get($colors, blue);
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .button--brown {
@@ -27,5 +30,8 @@
   &:active {
     background: map_get($colors, brown);
     color: map_get($colors, dark);
+  }
+  &:focus {
+    outline: none;
   }
 }

@@ -35,3 +35,10 @@
     right: -1rem;
   }
 }
+
+.fix {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
