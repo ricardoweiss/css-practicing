@@ -5,10 +5,6 @@
 @import "../ui/buttons";
 
 
-/*html {
-  scroll-behavior: smooth;
-}*/
-
 body {
   box-sizing: border-box;
   margin: 0;
@@ -364,11 +360,12 @@ body {
 
 
 .profile__title {
-  color: #d2d2d2;
+  color: map_get($colors, white);
 }
 
 .profile__description {
   font-size: 11px;
+  color: map_get($colors, darker);
   width: 80%;
   margin-top: 0;
   @include medium {
@@ -596,6 +593,7 @@ body {
 
 .certificates__text {
   margin-bottom: 2rem;
+  color: map_get($colors, mid-grey);
   @include large {
     margin-bottom: 0;
   }
@@ -664,10 +662,81 @@ body {
 
 .footer__title {
   color: white;
+  text-align: center;
+
 }
 
 .footer__description {
   color: map_get($colors, grey);
+  text-align: center;
+}
+
+.footer__social-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+}
+
+.social-list__item {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid map_get($colors, darker-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hackerrank-icon {
+  color: map_get($colors, mid-dark);
+  transition: color 500ms;
+}
+
+
+.hackerrank {
+  transition: background-color 500ms, border-color 500ms;
+  &:hover {
+    background-color: #1ba94c;
+    border-color: #1ba94c;
+    .hackerrank-icon {
+      color: white;
+    }
+  }
+}
+
+.github-icon {
+  color: map_get($colors, mid-dark);
+  transition: color 500ms;
+}
+
+.github {
+  transition: background-color 500ms, border-color 500ms;
+  &:hover {
+    background-color: #0f1113;
+    border-color: #0f1113;
+    .github-icon {
+      color: white;
+    }
+  }
+}
+
+.linkedin-icon {
+  color: map_get($colors, mid-dark);
+  transition: color 500ms;
+}
+
+.linkedin {
+  transition: background-color 500ms, border-color 500ms;
+  &:hover {
+    background-color: #4875b4;
+    border-color: #4875b4;
+    .linkedin-icon {
+      color: white;
+    }
+  }
 }
 
 @keyframes up-and-down {
@@ -680,11 +749,5 @@ body {
 
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes start-low {
-  0% {
-
   }
 }
