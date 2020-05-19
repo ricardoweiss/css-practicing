@@ -806,18 +806,44 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  top: 15%;
-  left: 29%;
+  top: 6%;
+  left: 15%;
   background-color: white;
   z-index: 101;
-  width: 40%;
+  width: 70%;
+  @include large {
+    width: 50%;
+    left: 24%;
+    top: 15%;
+  }
+  @include large-desktop {
+    width: 40%;
+    left: 30%;
+    top: 15%;
+  }
 }
 
 
 .modal__image {
   width: 100%;
-  max-width: 30rem;
+  max-width: 22rem;
   min-width: 7rem;
+  max-height: 24.5rem;
+  border: 2px solid #d2d2d2;
+}
+
+.modal__title {
+
+}
+
+.modal__description {
+  font-size: 0.75rem;
+  @include large {
+    font-size: 1rem;
+  }
+  @include large-desktop {
+    font-size: 1.2rem;
+  }
 }
 
 

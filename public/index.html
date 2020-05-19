@@ -10,21 +10,30 @@
 <body>
 <div class="backdrop"></div>
 <div class="works__modal works__modal--matchgame">
-        <img class="modal__image" src="images/memorygame2.png" alt="memory game">
+    <img class="modal__image" src="images/memorygame2.png" alt="memory game">
 
-    <h1>blabla</h1>
-    <p>panana</p>
+    <h1 class="modal__title">Matchgame Vanilla JS</h1>
+    <p class="modal__description">Made for the Udacity's final project in the Programming Introduction course. It has a
+        time counter that starts
+        along with the first move, a star ranking system relative to the number of moves made, and a restart button that
+        restart the game (obviously) and shuffle the cards. When the player wins, a congratulations modal appear with
+        the time and star rank displayed</p>
+    <button class="button button-closematchgame">BACK</button>
 </div>
 <div class="works__modal works__modal--uhost">
-    <div class="modal__image-container">
-        <img class="modal__image" src="images/uhost.png" alt="memory game">
-    </div>
+    <img class="modal__image" src="images/uhost.png" alt="memory game">
+    <h1 class="modal__title">Uhost</h1>
+    <p class="modal__description">This site was made for the CSS Complete Guide course project, its a HTML, SCSS, and JS
+        Vanilla full responsive example of a basic hosting site, constructed with Flexbox, CSS grid and media queries.</p>
+    <button class="button button-closeuhost">BACK</button>
 </div>
 <div class="works__modal works__modal--sedazord">
-    <div class="modal__image-container">
-        <img class="modal__image" src="images/carregando&login.png" alt="memory game">
-    </div>
+    <img class="modal__image" src="images/carregando&login.png" alt="memory game">
+    <h1 class="modal__title">Sedazord</h1>
+    <p class="modal__description">Sedazord is an tobacco shop app, currently under development. The entire app design and interfaces as well as the user flow were made by me. According with the UX/UI best practices and concepts</p>
+    <button class="button button-closesedazord">BACK</button>
 </div>
+
 <main class="container">
     <section class="landing-page">
         <div class="landing-page__image-container">
@@ -55,7 +64,7 @@
             Front-end & Back-end Web Development
         </p>
         <a href="#about-section"></a>
-        <button class="button button--blue" type="button">FIND OUT MORE</button>
+        <button class="button--goto button button--blue" type="button">FIND OUT MORE</button>
 
     </section>
     <section id="about-section" class="about">
@@ -280,22 +289,26 @@
             <div class="personal-info__container">
                 <div class="personal-info__profile">
                     <h1 class="profile__title">Profile</h1>
-                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone: +55 32 9 8873 1878</p>
+                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone:
+                        +55 32 9 8873 1878</p>
                 </div>
                 <div class="personal-info__experience">
                     <h1 class="profile__title">Experience</h1>
-                    <p class="profile__description">Front-end & UX/UI Designer, Sedazord 2020 - Present<br>Front-end, RW Business  2019-2020<br>Co-founder of Naturliche iceland yogurt 2015 - 2018</p>
+                    <p class="profile__description">Front-end & UX/UI Designer, Sedazord 2020 - Present<br>Front-end, RW
+                        Business 2019-2020<br>Co-founder of Naturliche iceland yogurt 2015 - 2018</p>
                 </div>
 
                 <div class="personal-info__vertical-line"></div>
 
                 <div class="personal-info__education">
                     <h1 class="profile__title">Education</h1>
-                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone: +55 32 9 8873 1878</p>
+                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone:
+                        +55 32 9 8873 1878</p>
                 </div>
                 <div class="personal-info__languages">
                     <h1 class="profile__title">Languages</h1>
-                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone: +55 32 9 8873 1878</p>
+                    <p class="profile__description">Adress: Piracicaba, SP<br>Age: 22<br>Email: ricardohsweiss@gmail.com<br>Phone:
+                        +55 32 9 8873 1878</p>
                 </div>
             </div>
 
@@ -326,7 +339,8 @@
 
 
         <div class="works__image-container">
-            <img class="works__photo awards__photo--no-shadow works__photo--adjustment matchgame" src="images/memorygame2.png"
+            <img class="works__photo awards__photo--no-shadow works__photo--adjustment matchgame"
+                 src="images/memorygame2.png"
                  alt="jogo de memória">
             <img class="works__photo uhost" src="images/uhost.png" alt="site de host">
             <img class="works__photo sedazord" src="images/carregando&login.png" alt="app sedazord">
@@ -355,8 +369,11 @@
     <footer class="footer">
         <div class="footer__text">
             <h1 class="footer__title">THANKS FOR YOUR <span style="color: #009999">TIME</span></h1>
-            <p class="footer__description">Hope you enjoyed it! Below are some of my<br> social medias, feel free to contact.</p>
-            <a class="back-to-top" href="#"><button class="button button--brown">BACK TO TOP</button></a>
+            <p class="footer__description">Hope you enjoyed it! Below are some of my<br> social medias, feel free to
+                contact.</p>
+            <a class="back-to-top" href="#">
+                <button class="button button--brown">BACK TO TOP</button>
+            </a>
 
             <ul class="footer__social-list">
                 <li class="social-list__item hackerrank">

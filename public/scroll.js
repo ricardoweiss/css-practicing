@@ -1,5 +1,5 @@
 const footerBtn = document.querySelector('.back-to-top');
-const landingBtn = document.querySelector('.button');
+const landingBtn = document.querySelector('.button--goto');
 const aboutSection = document.getElementById('about-section');
 
 landingBtn.addEventListener('click', smoothScrollDown);

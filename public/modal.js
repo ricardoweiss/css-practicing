@@ -1,5 +1,8 @@
 const backdrop = document.querySelector('.backdrop');
 
+const closeMatchGameBtn = document.querySelector('.button-closematchgame')
+const closeUhostBtn = document.querySelector('.button-closeuhost')
+const closeSedazordBtn = document.querySelector('.button-closesedazord')
 
 const matchgamePhoto = document.querySelector('.matchgame');
 const matchgameModal = document.querySelector('.works__modal--matchgame');
@@ -18,7 +21,6 @@ function openMatchGameModal() {
 
 function openUhostModal() {
     backdrop.style.display = "block";
-    console.log(uhostModal)
     uhostModal.style.display = "flex";
 }
 
@@ -42,6 +44,8 @@ function closeSedazordModal() {
     sedazordModal.style.display = "none";
 }
 
+
+
 sedazordPhoto.addEventListener('click', openSedazordGameModal);
 uhostPhoto.addEventListener('click', openUhostModal);
 matchgamePhoto.addEventListener('click', openMatchGameModal);
@@ -50,3 +54,7 @@ backdrop.addEventListener('click', closeMatchGameModal)
 backdrop.addEventListener('click', closeUhostModal)
 backdrop.addEventListener('click', closeSedazordModal)
 
+
+closeMatchGameBtn.addEventListener('click', closeMatchGameModal)
+closeUhostBtn.addEventListener('click', closeUhostModal)
+closeSedazordBtn.addEventListener('click', closeSedazordModal)
