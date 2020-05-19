@@ -18,6 +18,7 @@ function openMatchGameModal() {
 
 function openUhostModal() {
     backdrop.style.display = "block";
+    console.log(uhostModal)
     uhostModal.style.display = "flex";
 }
 
