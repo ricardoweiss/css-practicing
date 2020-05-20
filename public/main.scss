@@ -807,6 +807,7 @@ body {
   z-index: 101;
   width: 70%;
   max-width: 34rem;
+  animation: scaling 500ms;
   @include large {
     padding: 2rem;
   }
@@ -857,6 +858,7 @@ body {
   padding: 1rem;
   background-color: white;
   z-index: 101;
+  animation: top-to-bottom 500ms;
 }
 
 .certificates__modal-image {
@@ -878,5 +880,27 @@ body {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+
+@keyframes scaling {
+  0% {
+    transform: translate(-50%, -50%) scale(0.01);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes top-to-bottom {
+  0% {
+    transform: translate(-50%, -50%) translateY(-10rem);
+
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+
   }
 }
