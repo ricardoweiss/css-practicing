@@ -8,31 +8,57 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+<!-- Modals -->
+
 <div class="backdrop"></div>
 <div class="works__modal works__modal--matchgame">
     <img class="modal__image" src="images/memorygame2.png" alt="memory game">
 
-    <h1 class="modal__title">Matchgame Vanilla JS</h1>
+    <h1 class="modal__title--nomargin">Matchgame Vanilla JS</h1>
     <p class="modal__description">Made for the Udacity's final project in the Programming Introduction course. It has a
         time counter that starts
-        along with the first move, a star ranking system relative to the number of moves made, and a restart button that
-        restart the game (obviously) and shuffle the cards. When the player wins, a congratulations modal appear with
-        the time and star rank displayed</p>
-    <button class="button button-closematchgame">BACK</button>
+        along with the first move, and a star ranking system relative to the number of moves made. <!-- and a restart button that
+        restart the game (obviously) and shuffle the cards.When the player wins, a congratulations modal appear with
+        the time and star rank displayed--></p>
+    <button class="button button--modal button-close">BACK</button>
 </div>
 <div class="works__modal works__modal--uhost">
     <img class="modal__image" src="images/uhost.png" alt="memory game">
     <h1 class="modal__title">Uhost</h1>
     <p class="modal__description">This site was made for the CSS Complete Guide course project, its a HTML, SCSS, and JS
         Vanilla full responsive example of a basic hosting site, constructed with Flexbox, CSS grid and media queries.</p>
-    <button class="button button-closeuhost">BACK</button>
+    <button class="button button--modal button-close">BACK</button>
 </div>
 <div class="works__modal works__modal--sedazord">
     <img class="modal__image" src="images/carregando&login.png" alt="memory game">
     <h1 class="modal__title">Sedazord</h1>
     <p class="modal__description">Sedazord is an tobacco shop app, currently under development. The entire app design and interfaces as well as the user flow were made by me. According with the UX/UI best practices and concepts</p>
-    <button class="button button-closesedazord">BACK</button>
+    <button class="button button--modal button-close">BACK</button>
 </div>
+
+<div class="certificates__modal udacity-modal">
+    <img src="images/certificado-udacity.jpg" alt="" class="certificates__modal-image">
+    <button class="button button--modal button-close-certificate">BACK</button>
+</div>
+<div class="certificates__modal css-modal">
+    <img src="images/certificado-css.jpg" alt="" class="certificates__modal-image">
+    <button class="button button--modal button-close-certificate">BACK</button>
+</div>
+<div class="certificates__modal react-modal">
+    <img src="images/certificado-react.jpg" alt="" class="certificates__modal-image">
+    <button class="button button--modal button-close-certificate">BACK</button>
+</div>
+<div class="certificates__modal java-intro-modal">
+    <img src="images/certificado-java1.jpg" alt="" class="certificates__modal-image">
+    <button class="button button--modal button-close-certificate">BACK</button>
+</div>
+<div class="certificates__modal java-modal">
+    <img src="images/certificado-java2.jpg" alt="" class="certificates__modal-image">
+    <button class="button button--modal button-close-certificate">BACK</button>
+</div>
+
+<!-- Main -->
 
 <main class="container">
     <section class="landing-page">
@@ -355,15 +381,15 @@
 
         <div class="certificates__image-container">
 
-            <img src="images/certificado-udacity.jpg" alt="" class="certificates__photo">
+            <img src="images/certificado-udacity.jpg" alt="" class="certificates__photo udacity-certificate">
 
-            <img src="images/certificado-css.jpg" alt="" class="certificates__photo">
+            <img src="images/certificado-css.jpg" alt="" class="certificates__photo css-certificate">
 
-            <img src="images/certificado-react.jpg" alt="" class="certificates__photo">
+            <img src="images/certificado-react.jpg" alt="" class="certificates__photo react-certificate">
 
-            <img src="images/certificado-java1.jpg" alt="" class="certificates__photo">
+            <img src="images/certificado-java1.jpg" alt="" class="certificates__photo java-intro-certificate">
 
-            <img src="images/certificado-java2.jpg" alt="" class="certificates__photo">
+            <img src="images/certificado-java2.jpg" alt="" class="certificates__photo java-certificate">
         </div>
     </section>
     <footer class="footer">

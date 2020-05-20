@@ -1,60 +1,64 @@
+// Works modal -->
+
 const backdrop = document.querySelector('.backdrop');
 
-const closeMatchGameBtn = document.querySelector('.button-closematchgame')
-const closeUhostBtn = document.querySelector('.button-closeuhost')
-const closeSedazordBtn = document.querySelector('.button-closesedazord')
-
-const matchgamePhoto = document.querySelector('.matchgame');
-const matchgameModal = document.querySelector('.works__modal--matchgame');
-
-const uhostPhoto = document.querySelector('.uhost');
-const uhostModal = document.querySelector('.works__modal--uhost');
-
-const sedazordPhoto = document.querySelector('.sedazord');
-const sedazordModal = document.querySelector('.works__modal--sedazord');
+const worksCloseButtons = document.querySelectorAll('.button-close');
+const worksPhotos = document.querySelectorAll('.works__photo');
+const worksModal = document.querySelectorAll('.works__modal');
 
 
-function openMatchGameModal() {
+function openModal(modal) {
     backdrop.style.display = "block";
-    matchgameModal.style.display = "flex";
+    modal.style.display = "flex";
 }
 
-function openUhostModal() {
-    backdrop.style.display = "block";
-    uhostModal.style.display = "flex";
-}
-
-function openSedazordGameModal() {
-    backdrop.style.display = "block";
-    sedazordModal.style.display = "flex";
-}
-
-function closeMatchGameModal() {
+function closeModal(modal) {
     backdrop.style.display = "none";
-    matchgameModal.style.display = "none";
-}
-
-function closeUhostModal() {
-    backdrop.style.display = "none";
-    uhostModal.style.display = "none";
-}
-
-function closeSedazordModal() {
-    backdrop.style.display = "none";
-    sedazordModal.style.display = "none";
+    modal.style.display = "none";
 }
 
 
-
-sedazordPhoto.addEventListener('click', openSedazordGameModal);
-uhostPhoto.addEventListener('click', openUhostModal);
-matchgamePhoto.addEventListener('click', openMatchGameModal);
-
-backdrop.addEventListener('click', closeMatchGameModal)
-backdrop.addEventListener('click', closeUhostModal)
-backdrop.addEventListener('click', closeSedazordModal)
+for (let i = 0; i < worksPhotos.length; i++) {
+    worksPhotos[i].addEventListener('click', openModal.bind(null, worksModal[i]))
+    console.log('entrou 1');
+}
 
 
-closeMatchGameBtn.addEventListener('click', closeMatchGameModal)
-closeUhostBtn.addEventListener('click', closeUhostModal)
-closeSedazordBtn.addEventListener('click', closeSedazordModal)
+for (let i = 0; i < worksCloseButtons.length; i++) {
+    worksCloseButtons[i].addEventListener('click', closeModal.bind(null, worksModal[i]))
+    console.log('entrou 2');
+
+}
+
+
+for (let i = 0; i < worksModal.length; i++) {
+    backdrop.addEventListener('click', closeModal.bind(null, worksModal[i]))
+    console.log('entrou 3');
+
+}
+
+
+// Certificates modal -->
+
+
+const certificatesCloseButtons = document.querySelectorAll('.button-close-certificate');
+const certificateModals = document.querySelectorAll('.certificates__modal');
+const certificatePhotos = document.querySelectorAll('.certificates__photo');
+
+for (let i = 0; i < certificateModals.length; i++) {
+    backdrop.addEventListener('click', closeModal.bind(null, certificateModals[i]));
+}
+
+
+for (let i = 0; i < certificatesCloseButtons.length; i++) {
+    certificatesCloseButtons[i].addEventListener('click', closeModal.bind(null, certificateModals[i]))
+}
+
+for (let i = 0; i < certificatePhotos.length; i++) {
+    certificatePhotos[i].addEventListener('click', openModal.bind(null, certificateModals[i]))
+}
+
+
+
+
+

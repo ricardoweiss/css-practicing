@@ -36,8 +36,18 @@
   }
 }
 
-.button-closematchgame,
-.button-closesedazord,
-.button-closeuhost {
-  /*background: #5e582f;*/
+
+.button--modal {
+  background: #5e582f;
+  border: 2px solid grey;
+  transition: background-color 500ms, color 500ms;
+  &:hover,
+  &:active {
+    background: white;
+    color: #5e582f;
+  }
+}
+
+.button-close-certificate {
+  margin-top: 2rem;
 }

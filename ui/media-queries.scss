@@ -21,3 +21,11 @@
     @content
   }
 }
+
+
+
+@mixin small-height {
+  @media (max-height: 50rem) {
+    @content
+  }
+}

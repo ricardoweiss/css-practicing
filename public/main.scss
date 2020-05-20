@@ -768,6 +768,8 @@ body {
 }
 
 
+/* MODALS AND BACKDROP*/
+
 .backdrop {
 /*  display: none;
   height: 100vh;
@@ -790,14 +792,6 @@ body {
   display: none;
 }
 
-/*.works__modal-container {
-  display: flex;
-  position: fixed;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  z-index: 101;
-}*/
 
 .works__modal {
   display: none;
@@ -805,22 +799,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  top: 6%;
-  left: 15%;
+  padding: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   z-index: 101;
   width: 70%;
+  max-width: 34rem;
   @include large {
-    width: 50%;
-    left: 24%;
-    top: 15%;
+    padding: 2rem;
   }
-  @include large-desktop {
-    width: 40%;
-    left: 30%;
-    top: 15%;
-  }
+
 }
 
 
@@ -836,6 +826,13 @@ body {
 
 }
 
+.modal__title--nomargin {
+  margin: 0;
+  @include medium {
+      margin: 1.3rem;
+  }
+}
+
 .modal__description {
   font-size: 0.75rem;
   @include large {
@@ -847,7 +844,29 @@ body {
 }
 
 
+.certificates__modal {
+  width: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: white;
+  z-index: 101;
+}
 
+.certificates__modal-image {
+  width: 100%;
+  border: 1px solid grey;
+  max-width: 45rem;
+  min-width: 21rem;
+}
+
+/* ANIMATIONS */
 
 @keyframes up-and-down {
   0% {
