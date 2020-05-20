@@ -17,19 +17,16 @@ function closeModal(modal) {
     modal.style.display = "none";
 }
 
-
 for (let i = 0; i < worksPhotos.length; i++) {
     worksPhotos[i].addEventListener('click', openModal.bind(null, worksModal[i]))
     console.log('entrou 1');
 }
-
 
 for (let i = 0; i < worksCloseButtons.length; i++) {
     worksCloseButtons[i].addEventListener('click', closeModal.bind(null, worksModal[i]))
     console.log('entrou 2');
 
 }
-
 
 for (let i = 0; i < worksModal.length; i++) {
     backdrop.addEventListener('click', closeModal.bind(null, worksModal[i]))
@@ -40,7 +37,6 @@ for (let i = 0; i < worksModal.length; i++) {
 
 // Certificates modal -->
 
-
 const certificatesCloseButtons = document.querySelectorAll('.button-close-certificate');
 const certificateModals = document.querySelectorAll('.certificates__modal');
 const certificatePhotos = document.querySelectorAll('.certificates__photo');
@@ -48,7 +44,6 @@ const certificatePhotos = document.querySelectorAll('.certificates__photo');
 for (let i = 0; i < certificateModals.length; i++) {
     backdrop.addEventListener('click', closeModal.bind(null, certificateModals[i]));
 }
-
 
 for (let i = 0; i < certificatesCloseButtons.length; i++) {
     certificatesCloseButtons[i].addEventListener('click', closeModal.bind(null, certificateModals[i]))
