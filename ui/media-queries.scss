@@ -22,6 +22,11 @@
   }
 }
 
+@mixin ultra-large-desktop {
+  @media (min-width: 173rem) {
+    @content
+  }
+}
 
 
 @mixin small-height {
