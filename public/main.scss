@@ -179,7 +179,7 @@ body {
   margin-bottom: 0;
   margin-top: 1.5rem;
   /*margin-top: 3rem;*/
-  color: #1f1d1a;
+  color: map_get($colors, mid-grey);
   align-self: center;
   z-index: 1;
 
@@ -191,7 +191,7 @@ body {
 .about__subtitle {
   margin-left: 1rem;
   z-index: 1;
-  color: #1f1d1a;
+  color: map_get($colors, mid-grey);
   margin-top: 0.5rem;
   width: 80%;
   align-self: center;
@@ -573,8 +573,9 @@ body {
 .works__subtitle {
   color: map_get($colors, darker-grey);
   margin-top: 0;
-  @include  large {
 
+  @include  large {
+    margin-bottom: 2rem;
   }
 }
 
@@ -645,6 +646,7 @@ body {
 
 .certificates__subtitle {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .certificates__image-container {
@@ -659,7 +661,7 @@ body {
     align-items: center;
   }
   @include desktop {
-    height: 16rem;
+    height: 13rem;
     width: 95%;
     justify-content: space-evenly;
   }
