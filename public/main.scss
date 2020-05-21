@@ -179,7 +179,7 @@ body {
   margin-bottom: 0;
   margin-top: 1.5rem;
   /*margin-top: 3rem;*/
-  color: #1f1d1a;
+  color: map_get($colors, mid-grey);
   align-self: center;
   z-index: 1;
 
@@ -191,7 +191,7 @@ body {
 .about__subtitle {
   margin-left: 1rem;
   z-index: 1;
-  color: #1f1d1a;
+  color: map_get($colors, mid-grey);
   margin-top: 0.5rem;
   width: 80%;
   align-self: center;
@@ -375,12 +375,12 @@ body {
 
 
 .profile__title {
-  color: #ababab;
+  color: map_get($colors, mid-grey);
 }
 
 .profile__description {
   font-size: 11px;
-  color: #ababab;
+  color: map_get($colors, mid-grey);
   /*color: map_get($colors, darker);*/
   width: 80%;
   margin-top: 0;
@@ -565,17 +565,14 @@ body {
 .works__title {
   color: map_get($colors, darker-grey);
   margin-bottom: 0;
-  @include  large {
-  }
+  margin-top: 0;
 
 }
 
 .works__subtitle {
   color: map_get($colors, darker-grey);
   margin-top: 0;
-  @include  large {
-
-  }
+  margin-bottom: 2rem;
 }
 
 .works__image-container {
@@ -645,6 +642,7 @@ body {
 
 .certificates__subtitle {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .certificates__image-container {
@@ -659,7 +657,7 @@ body {
     align-items: center;
   }
   @include desktop {
-    height: 16rem;
+    height: 15rem;
     width: 95%;
     justify-content: space-evenly;
   }
