@@ -565,7 +565,10 @@ body {
 .works__title {
   color: map_get($colors, darker-grey);
   margin-bottom: 0;
-  margin-top: 0;
+  @include large {
+    margin-top: 0;
+  }
+
 
 }
 
