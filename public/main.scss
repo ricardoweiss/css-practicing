@@ -9,7 +9,6 @@
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   font-family: 'Oswald', sans-serif;
   background: map_get($colors, dark);
@@ -229,14 +228,14 @@ body {
 }
 
 #device,
-#react,
-#node,
-#mongo {
+#redux,
+#react_native,
+#jest {
   width: auto;
   height: 120px;
 }
 
-#express {
+#expo {
   width: auto;
   height: 110px;
 }
@@ -283,6 +282,10 @@ body {
   color: map_get($colors, blue);
 }
 
+.feature__title--purple {
+  color: #764abc;
+}
+
 .feature__description {
   font-size: 0.8rem;
   font-family: sans-serif;
@@ -301,6 +304,9 @@ body {
   color: map_get($colors, blue);
 }
 
+.feature__description--purple {
+  color: #764abc;
+}
 
 .personal-section {
   grid-area: personal;
@@ -550,6 +556,7 @@ body {
 
 
 .works {
+  padding: 10px;
   grid-area: awards;
   background: map_get($colors, blue);
   text-align: center;
@@ -577,6 +584,11 @@ body {
   color: map_get($colors, darker-grey);
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+.works__description {
+  width: 60%;
+  color: map_get($colors, darker-grey);
 }
 
 .works__image-container {
