@@ -626,6 +626,32 @@ body {
   }
 }
 
+.works__photo--kipkart {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  cursor: pointer;
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+  }
+
+  @include large {
+    width: auto;
+    margin: 0 0 2rem 0;
+    height: 8rem;
+    align-self: flex-end;
+    max-height: 15rem;
+  }
+}
+
+.fluid {
+  background-color: white;
+  padding: 16px;
+  width: 128px;
+}
+
 .works__photo--adjustment {
   @include large {
     height: 8.5rem;
@@ -841,7 +867,7 @@ body {
   display: none;
   position: fixed;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   left: 50%;
@@ -854,6 +880,9 @@ body {
   animation: scaling 500ms;
   @include large {
     padding: 2rem;
+    max-width: 42rem;
+    height: 70%;
+    max-height: 1000px;
   }
 
 }
@@ -865,10 +894,13 @@ body {
   min-width: 7rem;
   max-height: 24.5rem;
   border: 2px solid #d2d2d2;
+  &--fluid {
+    width: 100%
+  }
 }
 
 .modal__title {
-
+  text-align: center;
 }
 
 .modal__title--nomargin {
